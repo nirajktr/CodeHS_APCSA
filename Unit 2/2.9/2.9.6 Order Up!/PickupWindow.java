@@ -27,6 +27,6 @@ public class PickupWindow
         // Print out what the customer ordered
         System.out.println("Customer ordered number " + comboNumber);
         
-        
+        input.close();
     }
 }
