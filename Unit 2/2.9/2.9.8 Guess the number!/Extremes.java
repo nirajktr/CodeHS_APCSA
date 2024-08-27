@@ -19,7 +19,7 @@ public class Extremes
     // Returns the difference between the user's guess and the min value
     public int minDiff(int guess)
     {
-        return Math.abs(min - guess);
+        return min - guess;
     }
     
     // Returns a String representation
