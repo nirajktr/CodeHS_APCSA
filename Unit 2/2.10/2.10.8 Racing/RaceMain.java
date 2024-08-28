@@ -18,8 +18,7 @@ public class RaceMain
         double time2 = car2.computeTime(distance);
         
         // Print times of each car
-        System.out.println("First car finished in " + time1 + " seconds");
-        System.out.println("Second car finished in " + time2 + " seconds");
-        
+        System.out.println("First car finished in " + String.valueOf(time1) + " seconds");
+        System.out.println("Second car finished in " + String.valueOf(time2) + " seconds");
     }
 }
