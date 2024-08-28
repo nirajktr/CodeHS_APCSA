@@ -3,10 +3,10 @@ public class Racecar
     private double accel; // acceleration
     private String name; // name of driver
     
-    public Racecar(double acceleration, String driver)
-    {
+    // Constructor
+    public Racecar(String driverName, double acceleration) {
+        name = driverName;
         accel = acceleration;
-        name = driver;
     }
     
     // Returns the time it takes the racecar
