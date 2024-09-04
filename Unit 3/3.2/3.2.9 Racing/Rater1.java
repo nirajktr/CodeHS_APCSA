@@ -1,4 +1,4 @@
-public class RaterTester
+public class Rater1
 {
     private String name; // name of company
     private int rating; // number rating (1 - 100)
