@@ -1,39 +1,33 @@
 import java.util.Scanner;
 
-public class Basketball {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Basketball
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
         
-        // Input player names
-        System.out.print("Enter player one's name: ");
-        String playerOne = scanner.nextLine(); 
+        // Start by listing the steps you need to take
+        System.out.println("Enter player one's name: ");
+        String name1 = scan.next();
+        System.out.println("Enter player two's name:");
+        String name2 = scan.next();
+        System.out.println("Enter " + name1 + "'s score");
+        int score1 = scan.nextInt();
+        System.out.println("Enter " + name2 + "'s score");
+        int score2 = scan.nextInt();
+        if (name1.compareTo(name2) < 0) {
+            System.out.println(name1 + " scored " + score1 + " points");
+            System.out.println(name2 + " scored " + score2 + " points");
+        } else {
+            System.out.println(name2 + " scored " + score2 + " points");
+            System.out.println(name1 + " scored " + score1 + " points");
+        }
         
-        System.out.print("Enter player two's name: ");
-        String playerTwo = scanner.nextLine();
-
-        // Input player scores
-        System.out.print("Enter " + playerOne + "'s score: ");
-        int scoreOne = scanner.nextInt();
-
-        System.out.print("Enter " + playerTwo + "'s score: ");
-        int scoreTwo = scanner.nextInt();
-
-        // Determine alphabetical order using compareTo
-        if (playerOne.compareTo(playerTwo) < 0) {
-            System.out.println(playerOne + " scored " + scoreOne + " points");
-            System.out.println(playerTwo + " scored " + scoreTwo + " points");
+        if (score1 > score2) {
+        System.out.println(name1 + " wins!");
         } else {
-            System.out.println(playerTwo + " scored " + scoreTwo + " points");
-            System.out.println(playerOne + " scored " + scoreOne + " points");
+        System.out.println(name2 + " wins!");
         }
-
-        // Determine which player scored more
-        if (scoreOne > scoreTwo) {
-            System.out.println(playerOne + " wins!");
-        } else if (scoreTwo > scoreOne) {
-            System.out.println(playerTwo + " wins!");
-        } else {
-            System.out.println("It's a tie!");
-        }
+        
     }
 }
