@@ -1,27 +1,24 @@
 import java.util.Scanner;
 
-public class Basketball
-{
-    public static void main(String[] args)
-    {
-        Scanner input = new Scanner(System.in);
-        
-        // Start by listing the steps you need to take
+public class Basketball {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // Prompt for player one's name and score
+        
+        // Input player names
         System.out.print("Enter player one's name: ");
-        String playerOne = scanner.nextLine();
-        System.out.print("Enter " + playerOne + "'s score: ");
-        int scoreOne = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-
-        // Prompt for player two's name and score
+        String playerOne = scanner.nextLine(); 
+        
         System.out.print("Enter player two's name: ");
         String playerTwo = scanner.nextLine();
+
+        // Input player scores
+        System.out.print("Enter " + playerOne + "'s score: ");
+        int scoreOne = scanner.nextInt();
+
         System.out.print("Enter " + playerTwo + "'s score: ");
         int scoreTwo = scanner.nextInt();
 
-        // Print scores in alphabetical order
+        // Determine alphabetical order using compareTo
         if (playerOne.compareTo(playerTwo) < 0) {
             System.out.println(playerOne + " scored " + scoreOne + " points");
             System.out.println(playerTwo + " scored " + scoreTwo + " points");
@@ -30,6 +27,7 @@ public class Basketball
             System.out.println(playerOne + " scored " + scoreOne + " points");
         }
 
+        // Determine which player scored more
         if (scoreOne > scoreTwo) {
             System.out.println(playerOne + " wins!");
         } else if (scoreTwo > scoreOne) {
